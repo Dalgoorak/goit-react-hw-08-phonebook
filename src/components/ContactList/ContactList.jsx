@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContactsAction } from 'redux/phonebookContacts/contactsSlice';
+import {
+  deleteContactData,
+  getContactData,
+} from 'redux/phonebookContacts/operations';
+
 import { getFilterContacts } from 'redux/phonebookContacts/selectors';
 
 import css from './ContactList.module.css';
 
 export const ContactList = () => {
-  const contacts = useSelector(getFilterContacts);
   const dispatch = useDispatch();
+  const contacts = useSelector(getFilterContacts);
+
+  useEffect(() => {
+    dispatch(getContactData());
+  }, [dispatch]);
+
   const handleDeleteUser = id => {
-    dispatch(deleteContactsAction(id));
+    dispatch(deleteContactData(id));
   };
   return (
     <ul className={css.contactList}>
