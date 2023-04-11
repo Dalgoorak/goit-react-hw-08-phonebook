@@ -1,15 +1,24 @@
+.contacts {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.form{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.label{
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .input {
-    border: 2px solid rgb(71, 71, 244);
-    width: 300px;
-    height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.input:focus {
-    outline: 4px solid rgba(71, 71, 244, 0.2);
-}
-
-.title {
-    font-size: 15px;
+  margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
 }

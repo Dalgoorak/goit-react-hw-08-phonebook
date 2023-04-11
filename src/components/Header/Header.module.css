@@ -1,0 +1,27 @@
+.header{
+  padding: 20px;
+  background-color: rgba(147, 108, 237, 0.619);
+  height: 100px;
+}
+
+.icon{
+  margin-right: 20px;
+}
+
+.ul{
+  list-style-type: none;
+  gap: 30px;
+  margin: 20px;
+  display: flex;
+}
+
+
+.link{
+  text-decoration: none;
+}
+
+.button{
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+}

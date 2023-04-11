@@ -1,34 +1,26 @@
-.contactList {
-    padding-left: 20px;
+.list{
+  padding: 0 10px;
+  padding-bottom: 20px;
+  display: grid;
+  gap: 20px;
 }
 
-.item {
-    padding: 10px 10px;
+.item{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.number {
-    color: #f80;
+.name{
+  color: indigo;
+  font-size: 14px;
 }
 
-
-.name {
-    font-weight: 500;
-}
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 2px 7px;
-    margin-left: 10px;
-    border: 2px solid rgb(71, 71, 244);
-    border-radius: 3px;
-    background-color: #fff;
-    color: black;
-}
-
-.button:hover,
-.button:focus {
-    background-color: rgb(71, 71, 244);
+.button{
+  margin-left: 20px;
+  background-color: rgba(1, 1, 255, 0.281);
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
 }

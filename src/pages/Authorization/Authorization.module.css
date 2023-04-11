@@ -1,19 +1,28 @@
-.title {
-  margin: 15px 0;
-  text-align: center;
+.block {
+  background-color: antiquewhite;
+  width: 300px;
 }
 
-.boxInput {
+.title {
+  text-align: center;
+  padding: 30px;
+  color: rgb(142, 71, 157);
+  margin: 0 auto;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   padding: 20px;
 }
 
-.label{
+.label {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;  
 }
 
 .input {
@@ -22,9 +31,7 @@
   border-radius: 5px;
 }
 
-.addContact {
-  margin-top: 25px;
-  background-color: rgba(1, 1, 255, 0.281);
+.button {
   border: none;
   border-radius: 5px;
   padding: 6px 10px;

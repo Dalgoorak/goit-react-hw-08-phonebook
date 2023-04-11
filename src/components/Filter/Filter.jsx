@@ -1,25 +1,30 @@
-import { getFilter } from '../../redux/phonebookContacts/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilterAction } from 'redux/phonebookContacts/filterSlice';
+import { filterContactAction } from 'redux/filter/filter-slice';
 import css from './Filter.module.css';
 
 export const Filter = () => {
-  const filter = useSelector(getFilter);
   const dispatch = useDispatch();
-  const onChange = event => {
-    dispatch(changeFilterAction(event.target.value));
-  };
-  return (
-    <label className={css.inputLabel}>
-      <h3 className={css.title}>Find contacts by name</h3>
+  const value = useSelector(state => state.filter.filter);
 
-      <input
-        type="text"
-        value={filter}
-        name="filter"
-        onChange={onChange}
-        className={css.input}
-      />
-    </label>
+  const filterContact = event => {
+    const { value } = event.currentTarget;
+    dispatch(filterContactAction(value));
+  };
+
+  return (
+    <>
+      <h2 className={css.contacts}>Contacts</h2>
+      <form className={css.form}>
+        <label className={css.label}>
+          Find contacts by name
+          <input
+            className={css.input}
+            type="text"
+            value={value}
+            onChange={filterContact}
+          />
+        </label>
+      </form>
+    </>
   );
 };
